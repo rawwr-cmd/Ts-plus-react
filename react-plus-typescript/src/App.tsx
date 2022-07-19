@@ -1,8 +1,15 @@
-import Todos from './components/todos'
+import Todos from './components/todos';
+import Modal from './models/model';
 
 function App() {
+  const todos = [
+    new Modal('Learn React'),
+    new Modal('Learn TypeScript'),
+  ]
+  // console.log(todos);
+
   return (
-    <Todos items={['Learning React', 'Learning Vanilla Js']}/>
+    <Todos items={todos}/>
   );
 }
 

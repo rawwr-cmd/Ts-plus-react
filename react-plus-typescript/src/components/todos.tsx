@@ -1,7 +1,8 @@
-const Todos: React.FC<{items: string[]}> = (props) => {
+import Modal from '../models/model'
+const Todos: React.FC<{items: Modal[]}> = (props) => {
     return (
         <ul>
-           {props.items.map(item => <li key={item}>{item}</li>)}
+           {props.items.map((item, index) => <li key={index}>{item.text}</li>)}
         </ul>
     )
 }
